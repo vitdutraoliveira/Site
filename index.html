@@ -44,9 +44,36 @@
         <article>
             <h3>Portifolio</h3>
             <p>este foi o primeiro site que desenvolvi na vida usando front-end, em 2026.</p>
-
-
         </article>
+    </section>
+    <section id="habilidades">
+        <h2>Habilidades e tecnologias </h2>
+        <table>
+
+            <thead>
+                <tr>
+                    <th>tecnologia</th>
+                    <th>Nivel</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody> 
+                <tr>
+                    <td>HTML</td>
+                    <td>Iniciante</td>
+                    <td>Capaz de construir páginas web com marcação e estruturação básica.</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>Iniciante</td>
+                    <td>Capacidade de estilizar páginas web com layouts responsivos.</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>Básico</td>
+                    <td>Entendimento básico de programação e manipulação de elementos DOM.</td>
+                </tr>
+            </tbody>        </table>
     </section>
     <footer>
         <p>Direitos reservados a Vitoria.</p>
@@ -54,6 +81,29 @@
         <section id="contato">
             <h2>Contato</h2>
             <p> Tem um projeto em mente? Entre em contato.</p>
+            <form action="">
+                <label for="nome">Nome: </label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefone">Telefone: </label>
+                <input type="tel" id="telefone" name="telefone" required>
+
+                <label for="assunto">Assunto: </label>
+                <select name="assunto" id="assunto">
+                    <option value="orçamento">Orçamento</option>
+                    <option value="dúvida">Dúvida</option>
+                    <option value="outros">Outros</option>
+                </select>
+                <label for="mensagem">Mensagem: </label>
+                <textarea name="mensagem" id="mensagem" cols="5" rows="5"></textarea>
+                <button type="submit">Enviar</button>
+                <br>
+                <input type=checkbox id="newsletter" name="newsletter">
+                <label for="newsletter">Deseja receber novidades por email?</label>
+            </form>
             <address>
                 <p>Email:<a href="mailto:vitdutraoliveira@gmail.com"> vitdutraoliveira@gmail.com</a></p>
                 <p>Telefone: <a href="tel:1199999999"> (48) 9999-9999</a></p>
