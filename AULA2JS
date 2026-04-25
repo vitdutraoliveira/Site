@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript - Aula 2</title>
+    <script src="SCRIPT.JS"></script>
+</head>
+
+<body>
+    <h1>TROCANDO DE COR AS DIV</h1>
+    <button id="botaoTrocaCor" onclick="trocaCor()">Trocar Cor</button>
+    <div id="div-1" class="divTrocaCor">DIV 1</div>
+    <div id="div-2" class="divTrocaCor">DIV 2</div>
+    <div id="div-3" class="divTrocaCor">DIV 3</div>
+
+
+
+
+</body>
+
+</html>

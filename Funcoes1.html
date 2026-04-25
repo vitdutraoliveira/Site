@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funções</title>
+    <script src="funcoesjs1.js">
+    </script>
+    <style>
+        label,
+        button {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Saudação personalizada </h1>
+    <label for="nome">Digite seu nome:</label>
+    <input type="text" id="nome" />
+    <label for="hora">Selecione o horário do dia:</label>
+
+    <select id="hora">
+        <option value="">Selecione</option>
+        <option value="8">manhã (8h)</option>
+        <option value="14">tarde (14h)</option>
+        <option value="20">noite (20h)</option>
+    </select>
+    <button onclick="mostraSaudacao()">Mostrar saudação</button>
+    <p id="mensagem"></p>
+</body>
+
+</html>
