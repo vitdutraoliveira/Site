@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> PetsLife | Cuidado e Carinho </title>
+    <link href="https://th.bing.com/th/id/OIP.m3Vc3zmrN0lvV-Zqyws5CQHaEJ?w=292&h=180&c=7&r=0&o=7&pid=1.7&rm=3"
+        rel="stylesheet">
+    <link rel="stylesheet" href="desafiopetcss.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🐾 PetsLife</div>
+        <nav>
+            <a href="#sobre" style="margin-right: 15px; text-decoration: none; color: var(--dark);">Sobre</a>
+            <a href="#servicos" style="text-decoration: none; color: var(--dark);">Serviços</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Cuidado que seu melhor amigo merece.</h1>
+            <p style="margin-bottom: 2rem;">Saúde, estética e muito amor em um só lugar. Venha conhecer nosso espaço em
+                Florianópolis!</p>
+            <a href="#contato" class="cta-button">Agendar Banho</a>
+        </div>
+        <img src="https://th.bing.com/th/id/OIP.xtOlzCh-z9X_av8__OPUrQHaE9?w=281&h=188&c=7&r=0&o=7&pid=1.7&rm=3"
+            alt="Cachorro feliz" class="hero-img" style="border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+    </section>
+
+    <section id="sobre" class="sobre">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <h2>Nossa História</h2>
+            <p>Com mais de 20 anos de experiência, a PetsLife nasceu da paixão pelos animais e do desejo de oferecer um
+                atendimento humanizado e técnico.</p>
+        </div>
+        <div class="indicadores">
+            <div class="info-card">
+                <h3>15k+</h3>
+                <p>Pets Atendidos</p>
+            </div>
+            <div class="info-card">
+                <h3>12</h3>
+                <p>Especialistas</p>
+            </div>
+            <div class="info-card">
+                <h3>20</h3>
+                <p>Anos de História</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="servicos">
+        <h2 style="text-align: center;">Nossos Serviços</h2>
+        <div class="grid-servicos">
+            <div class="card">
+                <img src="https://th.bing.com/th/id/OIP.Htii0jPAmEeaQ7RUqMefMAHaEK?w=290&h=180&c=7&r=0&o=7&pid=1.7&rm=3"
+                    alt="Banho e Tosa">
+                <div class="card-body">
+                    <h3>Banho e Tosa</h3>
+                    <p>Utilizamos produtos hipoalergênicos e técnicas de relaxamento.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://th.bing.com/th/id/OIP.ygUjlSNX9uMxE7_jf68zjAHaE7?w=294&h=196&c=7&r=0&o=7&pid=1.7&rm=3"
+                    alt="Veterinária">
+                <div class="card-body">
+                    <h3>Consultas</h3>
+                    <p>Check-ups preventivos e acompanhamento especializado.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://tse1.explicit.bing.net/th/id/OIP.XBS9o1GkjNYeJQTQC4XnNAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
+                    alt="Pet Shop">
+                <div class="card-body">
+                    <h3>Acessórios</h3>
+                    <p>As melhores rações e brinquedos para o seu pet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contato">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Fale Conosco</h2>
+        <form id="contato-form">
+            <input type="text" id="nome" placeholder="Seu Nome completo" required>
+            <input type="email" id="email" placeholder="Seu melhor e-mail" required>
+            <textarea id="mensagem" rows="4" placeholder="Como podemos ajudar seu pet?" required></textarea>
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <script>
+        const form = document.getElementById('contato-form');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+
+            if (nome.length < 3) {
+                alert("Por favor, insira um nome válido.");
+                return;
+            }
+
+            if (!email.includes('@')) {
+                alert("Por favor, insira um e-mail válido.");
+                return;
+            }
+
+            alert(`Obrigado, ${nome}! Recebemos sua mensagem e entraremos em contato em breve.`);
+            form.reset();
+        });
+    </script>
+<script src="desafiojs.js"></script>
+</body>
+
+</html>

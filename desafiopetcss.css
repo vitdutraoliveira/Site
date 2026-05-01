@@ -1,0 +1,254 @@
+:root {
+    --primary: #3532ee;    
+    --secondary: #55a9e0;  
+    --light: #F8F9FA;      
+    --dark: #333333;   
+    --white: #FFFFFF;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+header {
+    background: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+.hero {
+    position: relative; 
+    height: 80vh;
+    background: linear-gradient(135deg, var(--primary) 0%, #ffb383 100%);
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    overflow: hidden; 
+}
+
+.hero-content {
+    max-width: 600px;
+    color: var(--white);
+    z-index: 2; 
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.hero-img {
+    position: absolute;
+    right: 5%;
+    bottom: -20px;
+    width: 35%;
+    z-index: 1;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    transform: rotate(-2deg); 
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1.2rem 2.5rem;
+    background: var(--secondary);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(67, 97, 238, 0.3);
+}
+
+.sobre {
+    padding: 6rem 5%;
+    background: var(--white);
+}
+
+.sobre-container {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.indicadores {
+    display: flex; 
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    gap: 20px;
+}
+
+.info-card {
+    padding: 20px;
+    min-width: 200px;
+}
+
+.info-card h3 {
+    color: var(--primary);
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+.servicos {
+    padding: 6rem 5%;
+}
+
+.grid-servicos {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-body h3 {
+    margin-bottom: 10px;
+    color: var(--secondary);
+}
+
+.contato {
+    padding: 6rem 5%;
+    background: #f0f2f5;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+input, textarea {
+    padding: 1rem;
+    border: 2px solid #e1e1e1;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary);
+}
+
+button {
+    padding: 1.2rem;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+button:hover {
+    background: #e6762d;
+}
+
+@media (max-width: 992px) {
+    .hero-img {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        text-align: center;
+        justify-content: center;
+        height: auto;
+        padding: 5rem 5%;
+    }
+
+    .hero-img {
+        display: none; 
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .indicadores {
+        flex-direction: column;
+    }
+}
